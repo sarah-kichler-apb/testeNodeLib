@@ -1,0 +1,19 @@
+git init
+git add .
+git commit ""
+git config --global user.email "sarah.kichler.estudante@petrobras.com.br"
+git config --global user.name "Sarah"
+git commit ""
+git push
+
+
+
+
+REGEX
+
+1 LETRA qualquer  a
+2 LETRAS DIVERSAS [abc]
+3 LETRAS MAÍSCULAS E MINÚSCULAS [A-z]
+4 TUDO O QUÊ NÃO FOR LETRA [^A-z]
+5 ESPAÇOS EM BRANCO [/s]
+6 PARA ENCONTRAR UM METACARACTER 
