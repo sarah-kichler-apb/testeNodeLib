@@ -14,7 +14,7 @@ function extraiLinks(texto) {
         [captura[1]]:captura[2]
     }))
 
-    return resultados;
+    return resultados.length!==0?resultados:chalk.red("Não existem links nesse arquivo");
 }
 
 
@@ -72,8 +72,8 @@ async function pegaConteudo(caminhoDoArquivo) {
     try {
         const encoding = 'utf-8';
         const texto = await fs.promises.readFile(caminhoDoArquivo, encoding);
-        console.log(extraiLinks(texto));
-
+        //1) console.log(extraiLinks(texto));
+        return extraiLinks(texto);
     } catch(erro){
         trataErro(erro);
     } finally {
