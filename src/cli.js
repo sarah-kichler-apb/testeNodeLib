@@ -11,9 +11,9 @@ const caminho = process.argv;
 //console.log(caminho);
 //pegaConteudo(caminho[2]);
 
-function imprimeLista(valida, resultado, identificador = "") {
+async function imprimeLista(valida, resultado, identificador = "") {
     if (valida) {
-        console.log(chalk.blue('Lista de links:'), chalk.blackBright.bgGreen(identificador), listaValidada(resultado));
+        console.log(chalk.blue('Lista de links:'), chalk.blackBright.bgGreen(identificador), await listaValidada(resultado));
     } else {
         console.log(chalk.blue('Lista de links:'), chalk.blackBright.bgGreen(identificador), resultado);
     }
